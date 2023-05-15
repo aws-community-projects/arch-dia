@@ -26,7 +26,9 @@ then add the aspect to your Stack
 
 ```
 const myStack = new Stack(app, 'MyStack');
-Aspects.of(myStack).add(new ArchitectureDiagramAspect());
+const archDia = new ArchitectureDiagramAspect();
+Aspects.of(myStack).add(archDia);
+archDia.generateDiagram();
 ```
 
 ## Example 1 - Simple Stack
