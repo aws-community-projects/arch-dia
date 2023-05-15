@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArchitectureDiagramAspect Add Queue to Stack 1`] = `
+"# MyTestStack
+
+\`\`\`mermaid
+graph LR;
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack]
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack] ==> c8a33fea56cf1bd6e8b5c652f393a6d315e7a78836[MyQueue]:::added
+c8a33fea56cf1bd6e8b5c652f393a6d315e7a78836[MyQueue]:::added ==> c80cb3f181e7dbb6726caf602717b2585dabff5aff[Resource - AWS::SQS::Queue]:::added
+classDef default fill:#fff,stroke:#000,color:black;
+classDef added fill:#cfc,stroke:#cfc,stroke-width:2px,color:black;
+classDef removed fill:#fcc,stroke:#fcc,stroke-width:2px,color:black;
+\`\`\`
+"
+`;
+
+exports[`ArchitectureDiagramAspect Basic Stack 1`] = `
+"# MyTestStack
+
+\`\`\`mermaid
+graph LR;
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack]
+classDef default fill:#fff,stroke:#000,color:black;
+classDef added fill:#cfc,stroke:#cfc,stroke-width:2px,color:black;
+classDef removed fill:#fcc,stroke:#fcc,stroke-width:2px,color:black;
+\`\`\`
+"
+`;
+
+exports[`ArchitectureDiagramAspect Normalize after addition 1`] = `
+"# MyTestStack
+
+\`\`\`mermaid
+graph LR;
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack]
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack] --> c8a33fea56cf1bd6e8b5c652f393a6d315e7a78836[MyQueue]
+c8a33fea56cf1bd6e8b5c652f393a6d315e7a78836[MyQueue] --> c80cb3f181e7dbb6726caf602717b2585dabff5aff[Resource - AWS::SQS::Queue]
+classDef default fill:#fff,stroke:#000,color:black;
+classDef added fill:#cfc,stroke:#cfc,stroke-width:2px,color:black;
+classDef removed fill:#fcc,stroke:#fcc,stroke-width:2px,color:black;
+\`\`\`
+"
+`;
+
+exports[`ArchitectureDiagramAspect Normalize after removal from Stack 1`] = `
+"# MyTestStack
+
+\`\`\`mermaid
+graph LR;
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack]
+classDef default fill:#fff,stroke:#000,color:black;
+classDef added fill:#cfc,stroke:#cfc,stroke-width:2px,color:black;
+classDef removed fill:#fcc,stroke:#fcc,stroke-width:2px,color:black;
+\`\`\`
+"
+`;
+
+exports[`ArchitectureDiagramAspect Remove Queue from Stack 1`] = `
+"# MyTestStack
+
+\`\`\`mermaid
+graph LR;
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack]
+c814b2c5dc22d11a84e78a63be7bb7815715b70534[MyTestStack] -.-> c8a33fea56cf1bd6e8b5c652f393a6d315e7a78836[MyQueue]:::removed
+c8a33fea56cf1bd6e8b5c652f393a6d315e7a78836[MyQueue]:::removed -.-> c80cb3f181e7dbb6726caf602717b2585dabff5aff[Resource - AWS::SQS::Queue]:::removed
+classDef default fill:#fff,stroke:#000,color:black;
+classDef added fill:#cfc,stroke:#cfc,stroke-width:2px,color:black;
+classDef removed fill:#fcc,stroke:#fcc,stroke-width:2px,color:black;
+\`\`\`
+"
+`;
