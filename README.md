@@ -18,6 +18,17 @@ This uses no external dependencies!
 - Normal arrow lines indicate an existing linkage
 - dashed/dotted arrow lines indicate a removed linkage
 
+## Installation Instructions
+
+`npm install @aws-community/arch-dia --save-dev`
+
+then add the aspect to your Stack
+
+```
+const myStack = new Stack(app, 'MyStack');
+Aspects.of(myStack).add(new ArchitectureDiagramAspect());
+```
+
 ## Example 1 - Simple Stack
 
 ```mermaid

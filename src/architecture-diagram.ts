@@ -20,14 +20,9 @@ export class ArchitectureDiagramAspect implements IAspect {
   private traverseConstruct (construct: IConstruct, parentPath: string): void {
     const parentSplit = parentPath.split(' --> ');
     const currentParent = parentSplit[parentSplit.length - 1];
-    if (CfnResource.isCfnResource(construct)) {
-      console.log(
-        `CfnResource: ${construct.node.addr} - ${construct.node.id} - ${JSON.stringify(construct.cfnOptions)}`,
-      );
-    }
     const currentPath = `${currentParent}${currentParent ? ' --> ' : ''}${
       construct.node.addr
-    }[${construct.node.id}${
+    }[${construct.node.id.replace(/{|}/g, '')}${
       CfnResource.isCfnResource(construct)
         ? ` - ${construct.cfnResourceType}`
         : ''

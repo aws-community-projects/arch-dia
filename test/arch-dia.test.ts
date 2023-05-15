@@ -1,4 +1,4 @@
-import { App, Stack } from 'aws-cdk-lib';
+import { App, Aspects, Stack } from 'aws-cdk-lib';
 import { Queue } from 'aws-cdk-lib/aws-sqs';
 
 const writeFile = jest.fn();
